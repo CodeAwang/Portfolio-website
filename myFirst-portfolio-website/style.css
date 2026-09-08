@@ -1,0 +1,356 @@
+
+@media (hover: hover) {
+  /* This code will ONLY run on laptops and computers with a mouse pointer */
+  .your-button-class:hover {
+    background-color: blue;
+    transform: scale(1.05);
+  }
+}
+* {
+  margin: 0;              /* Remove default outside spacing */
+  padding: 0;             /* Remove default inside spacing */
+  box-sizing: border-box; /* Make width/height easier to control */
+  font-family: 'Poppins'; /* Use Poppins font */
+  text-decoration: none;  /* Remove text decorations */
+  scroll-behavior: smooth;/* Smooth scrolling */
+  list-style: none;       /* Remove list bullets/numbers */
+}
+
+header{
+  position: fixed;
+  top: 1rem;
+  left:  50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  justify-content: center; 
+  gap: 5rem;
+  background-color: rgb(0,0,0,0.8);
+  backdrop-filter: blur(8px);
+  color: white;
+  padding: 0.5rem 1.5rem;
+  border-radius: 3rem;
+  z-index: 1000;
+}
+.logo{
+  color: white;
+  font-size: 1.3rem;
+  font-weight: 600;
+  text-wrap: nowrap;
+  transition: 0.3s ease-in-out;
+}
+.logo:hover{
+  transform: scale(1.1);
+}
+.nav-links{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
+li a{
+  position: relative;
+  color: white;
+  font-size: 300;
+}
+li a::before{
+  position: absolute;
+  content: '';
+  width: 0;
+  left: 0;
+  height: 4.5px;
+  top: 22px;
+  border-radius: 1rem;
+  transition: 0.3s ease-in-out;
+  background: linear-gradient(to right, rgb(0,157,225), rgb(255,0,255));
+}
+li a:hover::before{
+  width: 100%;
+}
+
+.visit-btn{
+  padding: 0.8rem 1.5rem;
+  border-radius: 3rem;
+  border: none;
+  font-weight: 500;
+  font-size: 1rem;
+  color: white;
+  cursor: pointer;
+  text-wrap: nowrap;
+  transition: 0.3s ease-in-out;
+  background: linear-gradient(to right, rgb(0,157,225), rgb(255,0,255));
+}
+.visit-btn:hover{
+  transform: scale(1.1);
+  background: linear-gradient(to right, rgb(255,0,255), rgb(0,157,225));
+}
+.visit-btn:active{
+  transform: scale(0.9);
+}
+#menu-icon{
+  font-size: 2rem;
+  display: none;
+}
+section{
+  min-height: 100vh;
+  padding: 8rem 12%;
+  width: 100%;
+  position: relative;
+}
+.about{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+.about .about-container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
+.about img{
+  width: 30vw;
+  border-radius: 50%;
+}
+.info-box{
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  gap:1.5rem;
+}
+.info-box h3{
+  font-size: 1.8rem;
+  font-weight: 500;
+  opacity: 0.8;
+}
+.info-box h1{
+  font-size: 4rem;
+  font-weight: 600;
+}
+.info-box span{
+  background : linear-gradient(to right, rgb(255,0,255), rgb(0,157,225));
+  background-clip: text;
+  color: transparent;
+  font-size: 2rem;
+}
+
+  
+.contact-me{
+  display: grid;
+  grid-template-columns: 1fr;
+  align-items: center;
+  gap: 2rem;
+}
+.btn-group{
+  display: flex;
+  gap: 1rem;
+}
+.btn{
+  border-radius: 3rem;
+  padding: 0.5rem 1.5rem;
+  border: 2px solid black;
+  cursor: pointer;
+  font-weight: 500;
+  text-wrap: nowrap;
+  transition: 0.2s ease-in-out;
+}
+.btn:hover{
+  background: rgb(57, 56, 56);
+  color: white;
+  transform: scale(1.1);
+}
+.btn:active{
+  background: white;
+  transform: scale(1);
+  color: black;
+
+}
+.socials{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+}
+.socials span{
+  font-size: 2rem;
+  font-weight: 600;
+}
+.socials i{
+  margin-left: -1rem;
+  font-size: 2.5rem;
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
+}
+.socials i:hover{
+  transform: scale(1.4);
+}
+
+/*skill section*/
+
+.section-title{
+  text-align: center;
+  font-size: 3rem;
+  font-weight: 600;
+  margin-bottom: 3rem;
+}
+.skill-info{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+}
+
+.skills img{
+  width: 25vw;
+  border-radius: 3rem;
+  transition: 0.3s ease-in-out;
+}
+.skills img:hover{
+  transform: scale(1.06);
+}
+
+.grid{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap:2rem;
+}
+
+.grid-card{
+  border: 2px solid black;
+  border-radius: 2rem;
+  padding: 2.3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+}
+.grid-card:hover{
+  background-color: rgb(4, 4, 4);
+  color: white;
+  transform: scale(1.05);
+}
+.grid-card i{
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+.grid-card span{
+  font-size: 1.3rem;
+  font-weight: 600;
+  background: linear-gradient(to right, rgb(255,0,255), rgb(0,157,225));
+  background-clip: text;
+  color: transparent;
+}
+
+::-webkit-scrollbar{
+  width: 20px;
+}
+::-webkit-scrollbar-track{
+  background-color: rgb(168, 168, 168);
+}
+::-webkit-scrollbar-thumb{
+  background: linear-gradient(to bottom, rgb(255,0,255), rgb(0,157,225));
+  
+}
+
+/*project section*/
+.projects-grid{
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
+  gap: 2rem;
+}
+.project-card{
+padding: 2rem 1rem;
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+text-align: center;
+gap: 1.5rem;
+border: 2px solid black;
+border-radius: 3rem;
+cursor: pointer;
+transition: 0.3s ease-in-out;
+}
+.project-card:hover{
+  background-color: black;
+  color: white;
+  transform: translate(-10px)scale(1.05);
+}
+.project-card img{
+  width: 30vw;
+  border-radius: 1rem;
+}
+.project-card:hover .btn{
+  border: 2px solid white;
+  color: white;
+}
+.project-card:hover .btn:hover{
+  border: 2px solid white;
+  background-color: white;
+  color: black;
+}
+.project-card h3{
+  font-size: 2rem;
+  font-weight: 500;
+}
+
+/*contact*/
+.input-box{
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  margin-top: 3rem;
+  gap: 2rem;
+}
+.input-box input{
+  font-size: 3rem;
+  font-weight: 400;
+  padding: 2rem 8rem;
+  border-radius: 3rem;
+  border: 2px solid black;
+}
+.input-box input::placeholder{
+  font-size: 3rem;
+}
+.input{
+  position: relative;
+}
+.input i{
+  position: absolute;
+  font-size: 4rem;
+  top: 50%;
+  left: 10px;
+  transform: translate(50%,-50%);
+}
+
+/*footer*/
+
+footer{
+  background-color: rgb(4, 4, 4);
+  margin-bottom: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
+footer ul{
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+}
+footer ul li a{
+  font-weight: 600;
+}
+.copyright{
+  font-size: 400;
+  color: white;
+  margin-top: 1rem;
+}
